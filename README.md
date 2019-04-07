@@ -11,7 +11,7 @@ pre-built binary for your system.
 
 You can also `go get` to install from source.
 
-    go get -u github.com/tombell/zengarden/cmd/zengarden
+    go get -u github.com/tombell/zengarden/cmd/zg
 
 On macOS you can use [Homebrew](https://brew.sh) to install.
 
