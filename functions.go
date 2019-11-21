@@ -33,7 +33,7 @@ func filter(key string, val interface{}, data []Context) []Context {
 		}
 	}
 
-	return nil
+	return result
 }
 
 func slice(offset, count int, data []Context) []Context {
