@@ -28,7 +28,9 @@ func (p Pages) context() []Context {
 	ctx := make([]Context, 0, len(p))
 
 	for _, page := range p {
-		ctx = append(ctx, page.vars)
+		if isConvertable(page.toPath()) {
+			ctx = append(ctx, page.vars)
+		}
 	}
 
 	return ctx
