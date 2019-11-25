@@ -2,7 +2,6 @@ package zengarden
 
 import (
 	"path/filepath"
-	"time"
 )
 
 // Page is a single non-post page not in the _posts directory.
@@ -65,5 +64,5 @@ func (p Pages) Swap(i, j int) {
 }
 
 func (p Pages) Less(i, j int) bool {
-	return p[i].vars["date"].(time.Time).UnixNano() < p[j].vars["date"].(time.Time).UnixNano()
+	return p[i].toPath() < p[j].toPath()
 }
